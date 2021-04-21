@@ -1,0 +1,132 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --Grayish-Blue-Trans: hsla(229, 6%, 66%, .4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: var(--Very-Light-Gray);
+    min-height: 100vh;
+    padding-top: 85px;
+}
+
+main {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+
+span {
+    display: block;
+    font-weight: 600;
+}
+
+p {
+    max-width: calc(1440px/2);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    color: var(--Grayish-Blue);
+    padding: 20px 90px;
+}
+
+section {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+article {
+    width: 30%;
+    height: 250px;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    padding: 30px;
+    padding-right: 50px;
+    color: var(--Grayish-Blue);
+    border-top: 5px solid;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px var(--Grayish-Blue-Trans);
+    margin: 15px;
+}
+
+article:nth-child(1) {
+    transform: translateY(50%);
+    border-top-color: var(--Cyan);
+}
+
+article:nth-child(2) {
+    border-top: 5px solid var(--Red);
+}
+
+article:nth-child(3) {
+    transform: translate(-110%, 110%);
+    border-top-color: var(--Orange);
+}
+
+article:nth-child(4) {
+    border-top-color: var(--Blue);
+    transform: translate(110%, -65%);
+}
+
+img {
+    width: 75px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+h2 {
+    color: var(--Very-Dark-Blue);
+    margin-bottom: 5px;
+}
+
+@media (max-width:768px) {
+    article:nth-child(1) {
+        transform: translateY(0%);
+    }
+    article:nth-child(3) {
+        transform: translate(0%, 0%);
+    }
+    article:nth-child(4) {
+        transform: translate(0%, 0%);
+    }
+    article {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    body {
+        padding: 30px;
+    }
+    p {
+        padding: 0;
+        padding-top: 20px;
+    }
+    h1 {
+        font-size: 1.7em;
+    }
+}
